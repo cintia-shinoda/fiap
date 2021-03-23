@@ -1,11 +1,13 @@
-package br.com.fiap.beans;
+ package br.com.fiap.beans;
 
 /*
 Design Patterns
 DTO  (Data Transfer Object): melhores práticas para a classe modelo
 - TODOS os atributos devem ser private,
-- cada atributo deve possuir INDIVIDUALMENTE um método GETTER e um método SETTER;
-- ...
+- Cada atributo deve possuir INDIVIDUALMENTE um método GETTER e um método SETTER;
+- TODA classe modelo/padrão/beans deve possuir no mínimo dois construtores
+a) uma vazio (sem nenhum parâmeetro
+b) um cheio (permite preencher todo o objeto
 */
 
 
@@ -14,6 +16,20 @@ public class Aluno {
 	private String nome;
 	private String email;
 	private String fone;
+	
+	
+	
+	public void setAll(int rm, String nome, String email, String fone) {
+		this.rm = rm;
+		this.nome = nome;
+		this.email = email;
+		this.fone = fone;
+	}
+	
+	
+	public String getAll() {
+		return rm + "\n" +  nome + "\n" + email + "\n" + fone;
+	}
 	
 	
 // GETTERS E SETTERS
@@ -41,12 +57,20 @@ public class Aluno {
 	public void setFone(String fone) {
 		this.fone = fone;
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+// CONSTRUTORES
+	public Aluno(int rm, String nome, String email, String fone) {
+		super();
+		this.rm = rm;
+		this.nome = nome;
+		this.email = email;
+		this.fone = fone;
+	}
+
+
+	public Aluno() {
+		super();
+	}
 	
 }
