@@ -16,23 +16,11 @@ public class Aluno {
 	private String nome;
 	private String email;
 	private String fone;
+	private Endereco endereco;
 	
 	
 	
-	public void setAll(int rm, String nome, String email, String fone) {
-		this.rm = rm;
-		this.nome = nome;
-		this.email = email;
-		this.fone = fone;
-	}
-	
-	
-	public String getAll() {
-		return rm + "\n" +  nome + "\n" + email + "\n" + fone;
-	}
-	
-	
-// GETTERS E SETTERS
+// GETTERS e SETTERS
 	public int getRm() {
 		return rm;
 	}
@@ -57,20 +45,63 @@ public class Aluno {
 	public void setFone(String fone) {
 		this.fone = fone;
 	}
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+	
+	
 
-
-// CONSTRUTORES
-	public Aluno(int rm, String nome, String email, String fone) {
+	
+// CONSTRUTORES	
+	public Aluno(int rm, String nome, String email, String fone, Endereco endereco) {
 		super();
 		this.rm = rm;
 		this.nome = nome;
 		this.email = email;
 		this.fone = fone;
+		this.endereco = endereco;
 	}
-
-
+	
+	
 	public Aluno() {
 		super();
 	}
+	
+	
+	
+	
+	
+// toString
+	@Override
+	public String toString() {
+		return "Aluno [rm=" + rm + ", nome=" + nome + ", email=" + email + ", fone=" + fone + ", endereco=" + endereco
+				+ "]";
+	}
+	
+	
+	
+	
+/*// setAll	
+	public void setAll(int rm, String nome, String email, String fone, Endereco endereco) {
+		this.rm = rm;
+		this.nome = nome;
+		this.email = email;
+		this.fone = fone;
+		this.endereco = endereco;
+	}
+	*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

@@ -1,6 +1,7 @@
 package br.com.fiap.implementacao;
 
 import br.com.fiap.beans.Aluno;
+import br.com.fiap.beans.Endereco;
 
 public class ImplementarAluno {
 
@@ -21,22 +22,33 @@ public class ImplementarAluno {
 		
 		
 		
+		
+		
+		
+		
+		// Construtor vazio - 2 objetos (Aluno e Endereco)
+		Endereco endereco = new Endereco();
+		endereco.setLogradouro("Avenida Paulista");
+		endereco.setNumero("1106");
+		endereco.setBairro("Bela Vista");
+		endereco.setCidade("São Paulo");
+		endereco.setUf("SP");
+		endereco.setCep("12345-000");
+		
+		
+/*
 		Aluno objeto2 = new Aluno();
 		
-		objeto2.setAll(
+			objeto2.setAll(
 				456,
 				"Izumi",
 				"cintia.shinoda@mac.com",
-				"1194948474");
+				"1194948474",
+				endereco);
 		
-		System.out.println(objeto2.getAll());
+		System.out.println(objeto2.toString());
 		
-		
-		
-		
-		
-		
-		
+*/		
 		
 		
 	}
